@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/view"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/margin_middle_12"
+        android:layout_marginRight="@dimen/margin_middle_12"
+        android:layout_marginTop="@dimen/margin_larger_50"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_write_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="书中人物/剧情  速速发表您的看法吧"
+            android:maxLength="500"
+            android:padding="@dimen/margin_10"
+            android:textColor="@color/text_color_black_1"
+            android:textSize="@dimen/textSize_m_14" />
+
+        <TextView
+            android:id="@+id/tv_write_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="@dimen/margin_10"
+            android:text="500"
+            android:textSize="@dimen/textSize_m_14" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="@dimen/margin_middle_12"
+        android:layout_marginRight="@dimen/margin_middle_12"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/margin_tiny_4"
+        android:paddingLeft="@dimen/margin_tiny_4"
+        android:paddingTop="@dimen/margin_tiny_4">
+
+        <ImageView
+            android:id="@+id/iv_write_pic"
+            android:layout_width="35dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_write_bookname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_toRightOf="@+id/iv_write_pic"
+            android:textColor="@color/text_color_black_1"
+            android:textSize="@dimen/textSize_m_14"
+            tools:text="极品家丁" />
+
+        <TextView
+            android:id="@+id/tv_write_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_toRightOf="@+id/iv_write_pic"
+            tools:text="XXX" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_write_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_larger_50"
+        android:layout_marginRight="@dimen/margin_larger_50"
+        android:layout_marginTop="@dimen/margin_large_32"
+        android:background="@drawable/textview_bookdetail_red"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_middle_12"
+        android:paddingTop="@dimen/margin_middle_12"
+        android:text="发表"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_m_14" />
+
+</LinearLayout>

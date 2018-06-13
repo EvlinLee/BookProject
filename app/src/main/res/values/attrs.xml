@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ContentWithSpaceEditText">
+        <attr name="input_type" format="enum">
+            <enum name="phone" value="0" />
+            <enum name="bank_card_no" value="1" />
+            <enum name="identify_card_no" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ReadCircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ExpandableTextViewAttr">
+        <!-- 允许显示最大行数 -->
+        <attr name="maxExpandLines" format="integer"/>
+        <!-- 动画执行时间 -->
+        <attr name="duration" format="integer"/>
+    </declare-styleable>
+</resources>

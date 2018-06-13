@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhangwan.app.widget.MyDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/read_drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ViewStub
+            android:id="@+id/vs_load"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/view_dot" />
+
+        <com.zhangwan.app.widget.PageWidget
+            android:id="@+id/bookpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:visibility="gone" />
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="gone">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/read_dialog_bg"
+                android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_status"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="invisible">-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_top"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_below="@id/ll_status"-->
+        <!--android:visibility="gone">-->
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/btn_return"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@mipmap/return_button"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_gravity="center_vertical" />-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="right"-->
+        <!--android:orientation="horizontal">-->
+        <!--<ImageButton-->
+        <!--android:id="@+id/btn_light"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:background="@color/black" />-->
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/btn_listener_book"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:background="@mipmap/img_tts" />-->
+        <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_read_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/read_dialog_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_stop_read"
+                style="@style/setting_dialog_button"
+                android:layout_centerInParent="true"
+                android:text="停止语音播放"
+                android:textSize="20dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:background="?attr/colorPrimary"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="00.00%"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bookpop_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/read_dialog_bg"
+                    android:baselineAligned="false"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_pre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/read_setting_pre"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <SeekBar
+                            android:id="@+id/sb_progress"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:max="10000"/>
+
+                        <TextView
+                            android:id="@+id/tv_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/read_setting_next"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_directory"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/directory"
+                            android:gravity="center"
+                            android:text="@string/read_setting_directory" />
+
+                        <TextView
+                            android:id="@+id/tv_dayornight"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/dayornight"
+                            android:gravity="center"
+                            android:text="@string/read_setting_night" />
+
+                        <TextView
+                            android:id="@+id/tv_pagemode"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/pagemode"
+                            android:gravity="center"
+                            android:text="@string/read_setting_pagemode" />
+
+                        <TextView
+                            android:id="@+id/tv_setting"
+                            style="@style/text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/aa"
+                            android:gravity="center"
+                            android:text="@string/read_setting_set" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--解锁章节-->
+    <RelativeLayout
+        android:id="@+id/rl_read_lock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_middle_12"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/margin_larger_50"
+                        android:layout_height="1px"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/divide_line" />
+
+                    <TextView
+                        android:id="@+id/tv_read_deblocking_go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_middle_12"
+                        android:text="解锁后继续阅读"
+                        android:textColor="@color/text_color_yellow"
+                        android:textSize="@dimen/textSize_l_16" />
+
+                    <View
+                        android:layout_width="@dimen/margin_larger_50"
+                        android:layout_height="1px"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_middle_12"
+                        android:background="@color/divide_line" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_read_deblocking_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/margin_small_8"
+                    android:src="@drawable/open_rp_close" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_read_deblocking_ban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/margin_middle_12"
+                android:layout_marginTop="@dimen/margin_middle_12"
+                android:textColor="@color/text_color_black_1"
+                android:textSize="@dimen/textSize_m_14"
+                tools:text="账户余额：0书币" />
+
+            <TextView
+                android:id="@+id/tv_read_deblocking_need"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_medium_16"
+                android:layout_marginLeft="@dimen/margin_middle_12"
+                android:layout_marginTop="@dimen/margin_small_8"
+                android:textColor="@color/text_color_black_1"
+                android:textSize="@dimen/textSize_m_14"
+                tools:text="本章解锁:2.2书币" />
+
+            <Button
+                android:id="@+id/btn_read_deblocking"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_larger_50"
+                android:layout_marginLeft="@dimen/margin_middle_12"
+                android:layout_marginRight="@dimen/margin_middle_12"
+                android:background="@drawable/selector_pay_sure"
+                android:text="立即解锁"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_l_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_small_8"
+                android:layout_marginTop="@dimen/margin_middle_12"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_dialog_read_deblocking_auto"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/margin_small_8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动解锁下一章，不再提示"
+                    android:textColor="@color/text_color_black_2"
+                    android:textSize="@dimen/textSize_m_14" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--充值-->
+    <RelativeLayout
+        android:id="@+id/rl_read_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_larger_50">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="余额不足"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/textSize_l_16" />
+
+                <ImageView
+                    android:id="@+id/iv_read_recharge_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/margin_small_8"
+                    android:src="@drawable/open_rp_close" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_big_80"
+                android:background="@color/color_read_dialog"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_read_bookpic"
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_middle_12"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/icon_zhanwei" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_middle_12">
+
+                    <TextView
+                        android:id="@+id/tv_read_bookname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium_16"
+                        android:textColor="#868686"
+                        android:textSize="@dimen/textSize_s_12"
+                        tools:text="书名：唯我独尊" />
+
+                    <TextView
+                        android:id="@+id/tv_read_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/margin_medium_16"
+                        android:textColor="@color/text_color_red"
+                        android:textSize="@dimen/textSize_s_12"
+                        tools:text="价格：88阅读币" />
+
+                    <TextView
+                        android:id="@+id/tv_read_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="@dimen/margin_medium_16"
+                        android:layout_marginRight="@dimen/margin_middle_12"
+                        android:textColor="@color/text_color_red"
+                        android:textSize="@dimen/textSize_s_12"
+                        tools:text="余额：66阅读币" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_middle_12"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/margin_larger_50"
+                    android:layout_height="1px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/divide_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_middle_12"
+                    android:text="余额不足，请先充值"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/textSize_m_14" />
+
+                <View
+                    android:layout_width="@dimen/margin_larger_50"
+                    android:layout_height="1px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_middle_12"
+                    android:background="@color/divide_line" />
+            </LinearLayout>
+
+            <com.zhangwan.app.recyclerview.RecyclerView
+                android:id="@+id/rv_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_dialog_read_buttom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_small_8"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_read_recharge"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/margin_small_8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动解锁下一章，不再提示"
+                    android:textColor="@color/text_color_black_2" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--侧滑栏（放在解锁和充值的下面，不然会失去焦点）-->
+    <include layout="@layout/item_read_drawable_layout" />
+</com.zhangwan.app.widget.MyDrawerLayout>

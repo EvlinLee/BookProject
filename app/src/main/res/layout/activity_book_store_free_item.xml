@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="@dimen/margin_10"
+    tools:context="com.zhangwan.app.ui.bookstore.free.BookStoreFreeActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_bookimg"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        tools:background="@color/orange"
+        android:scaleType="centerCrop" />
+
+      <TextView
+          android:id="@+id/read_count"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:background="@drawable/red_bg"
+          android:gravity="center"
+          android:layout_alignBottom="@+id/iv_bookimg"
+          android:layout_alignRight="@+id/iv_bookimg"
+          android:layout_marginBottom="@dimen/margin_10"
+          android:textSize="@dimen/textSize_xs"
+          android:textColor="@color/white"
+          android:text="9999人阅读"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_bookimg"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/margin_tiny"
+        android:paddingBottom="@dimen/margin_tiny"
+        android:text="小气了人"
+        />
+
+</RelativeLayout>

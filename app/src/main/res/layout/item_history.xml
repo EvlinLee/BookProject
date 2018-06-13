@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhangwan.app.widget.SwipeItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_history"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_item_history"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_item_history_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/margin_small_8"
+            android:layout_toRightOf="@+id/iv_item_history"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="极品桃花运"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_item_history_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_history_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/margin_small_8"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_toLeftOf="@+id/tv_item_history_again"
+            android:layout_toRightOf="@+id/iv_item_history"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="上次看到：第一章：老婆是母老虎"
+            android:textColor="@color/text_color_black_2"
+            android:textSize="@dimen/textSize_s_12" />
+
+        <TextView
+            android:id="@+id/tv_item_history_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_item_history"
+            android:text="2017-12-25"
+            android:textColor="@color/main"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_item_history_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_item_history_time"
+            android:text="更新至2521章"
+            android:textColor="@color/text_color_black_2"
+            android:textSize="@dimen/textSize_s_12" />
+
+        <TextView
+            android:id="@+id/tv_item_history_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_green_without_solid_selector"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_tiny"
+            android:paddingBottom="@dimen/margin_tiny"
+            android:text="续看"
+            android:textColor="@color/main"
+            android:textSize="@dimen/textSize_m_14" />
+        <View
+            android:layout_alignParentBottom="true"
+            style="@style/item_line"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_item_history_delete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/red_82p"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</com.zhangwan.app.widget.SwipeItemLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:layout_marginRight="20dp"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_medium_16"
+        android:text="章节目录"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_m_14" />
+
+    <ImageView
+        android:id="@+id/iv_read_choose"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_large_32"
+        android:background="@color/read_zhangjie_background"
+        android:paddingBottom="@dimen/margin_middle_12"
+        android:paddingTop="@dimen/margin_middle_12"
+        android:src="@drawable/icon_read_down" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhangwan.app.recyclerview.RecyclerView
+            android:id="@+id/rv_read_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.zhangwan.app.recyclerview.RecyclerView
+            android:id="@+id/rv_read_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

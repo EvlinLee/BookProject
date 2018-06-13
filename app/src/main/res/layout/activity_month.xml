@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/fragment_monthlyrea_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/fragment_monthlyrea_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/monthly"
+                    />
+
+                <TextView
+                    android:id="@+id/fragment_monthlyrea_introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/fragment_monthlyrea_through"
+                    android:layout_toRightOf="@+id/fragment_monthlyrea_logo"
+                    android:text="包月专区书籍 在线免费阅读 非包月书籍 享8折优惠"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/fragment_monthlyrea_through"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/open_vip_bg"
+                    android:text="立即开通"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_e5e5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/fragment_monthlyrea_view"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:layout_alignBottom="@+id/fragment_monthlyrea_type_tile"
+                    android:layout_alignTop="@+id/fragment_monthlyrea_type_tile"
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/fragment_monthlyrea_type_tile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/fragment_monthlyrea_view"
+                    android:text="包月新书推荐"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_monthlyrea_form_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey_e5e5"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_monthlyrea_vertical_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

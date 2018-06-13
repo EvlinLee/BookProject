@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item_message_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:textColor="@color/text_color_333333"
+        tools:text="《毕加索的猫》给吾辈带来了欢笑与泪恨，据说该游戏去年就出了，相见恨晚呐！真的，好久没有体会到这样的感觉了，那种只可意会不可言传的感觉。" />
+
+    <TextView
+        android:id="@+id/tv_item_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_item_message_content"
+        android:layout_below="@+id/tv_item_message_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:text="2018-12-13 19:00" />
+
+    <TextView
+        android:id="@+id/tv_item_message_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_item_message_time"
+        android:layout_alignRight="@+id/tv_item_message_content"
+        android:layout_below="@+id/tv_item_message_content"
+        android:background="?selectableItemBackground"
+        android:text="点击查看" />
+
+    <View
+        style="@style/item_line"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

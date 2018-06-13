@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部评论"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_bookdetail_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            tools:text="128人评论" />
+
+        <TextView
+            android:id="@+id/tv_bookdetail_gocomment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/write_comment"
+            android:drawablePadding="@dimen/margin_tiny_4"
+            android:gravity="center_vertical"
+            android:text="写评论"
+            android:textColor="@color/write_comment"
+            android:textSize="@dimen/textSize_s_12" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view" />
+
+    <com.zhangwan.app.recyclerview.RecyclerView
+        android:id="@+id/rv_bookdetail_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_bookinfo_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_10"
+        android:text="查看全部评论"
+        android:textSize="@dimen/textSize_m_14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_middle_12">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="猜你喜欢"
+            android:textColor="@color/text_color_black_1"
+            android:textSize="@dimen/textSize_m_14" />
+
+        <LinearLayout
+            android:id="@+id/ll_bookinfo_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_bookinfo"
+        android:layout_width="match_parent"
+        android:layout_height="140dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="免责声明"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_m_14" />
+
+    <TextView
+        android:lineSpacingExtra="@dimen/margin_tiny_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="@dimen/margin_10"
+        android:text="本书数据版权由“广西南宁市掌玩科技有限公司”提供并授权“追阅小说”联合销售，若书中含有不良信息，请书友告知客服"
+        android:textSize="@dimen/textSize_s" />
+</LinearLayout>

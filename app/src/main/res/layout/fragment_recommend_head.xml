@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.youth.banner.Banner
+            android:id="@+id/recommend_banner"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <include layout="@layout/fragment_main_recommend_type" />
+
+        <View style="@style/item_line" />
+
+        <include layout="@layout/fragment_main_recommend_area" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/view" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/module_divide_line">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+     >
+
+        <TextView
+            android:id="@+id/news_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:textColor="@color/text_color_333333"
+            android:text="新人优惠券" />
+
+        <TextView
+            android:id="@+id/valite_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/line_layout"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:textColor="@color/text_color_9696"
+            android:textSize="@dimen/textSize_s"
+            android:text="有效期:2015-12-1 至 2015-12-30" />
+
+        <LinearLayout
+            android:id="@+id/line_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_get"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_m"
+                android:text="￥8088" />
+
+            <TextView
+                android:id="@+id/ticket_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_s"
+                android:text="立即领取" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+       style="@style/item_line_mode"/>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/search_height"
+    android:gravity="center_vertical"
+    android:background="@drawable/selector_touch"
+    android:foreground="?android:selectableItemBackground"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_item_hot_num"
+        android:layout_width="@dimen/margin_medium_16"
+        android:layout_height="@dimen/margin_medium_16"
+        android:layout_marginLeft="@dimen/margin_middle_12"
+        android:background="@drawable/shape_search_hot_1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_s_12"
+        tools:text="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_medium_16"
+        android:layout_marginLeft="@dimen/margin_middle_12"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/tv_item_hot_name"
+        android:textColor="@color/text_color_black_1"
+        android:textSize="@dimen/textSize_s_12"
+        tools:text="乘风破浪会有时" />
+</LinearLayout>

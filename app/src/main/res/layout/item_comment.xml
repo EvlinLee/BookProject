@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_medium_16"
+        android:paddingLeft="@dimen/margin_middle_12"
+        android:paddingRight="@dimen/margin_middle_12"
+        android:paddingTop="@dimen/margin_medium_16">
+
+        <com.zhangwan.app.widget.CircleImageView
+            android:id="@+id/cv_item_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/tv_item_comment_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toLeftOf="@+id/tv_item_comment_start"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="哈哈哈哈哈" />
+
+            <TextView
+                android:id="@+id/tv_item_comment_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:maxLines="1"
+                tools:text="哈哈哈哈哈" />
+
+            <TextView
+                android:id="@+id/tv_item_comment_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_item_comment_name"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textColor="@color/text_color_black_1"
+                tools:text="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈" />
+
+            <TextView
+                android:id="@+id/tv_item_comment_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_item_comment_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/textSize_s_12"
+                tools:text="05-06 09：54" />
+
+            <TextView
+                android:id="@+id/tv_item_comment_thumbsup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_item_comment_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/thumbsup_normal"
+                android:drawablePadding="@dimen/margin_tiny_4"
+                android:textSize="@dimen/textSize_s_12"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/tv_item_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_item_comment_content"
+                android:drawableLeft="@drawable/comment"
+                android:drawablePadding="@dimen/margin_tiny_4"
+                android:textSize="@dimen/textSize_s_12"
+                android:visibility="gone"
+                tools:text="0" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/item_line" />
+
+</LinearLayout>

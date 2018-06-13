@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_middle_12"
+    android:paddingRight="@dimen/margin_middle_12">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_middle_12"
+        android:paddingTop="@dimen/margin_middle_12">
+
+        <TextView
+            android:id="@+id/tv_item_friend_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_black_1"
+            android:textSize="@dimen/textSize_m_14"
+            tools:text="成功邀请“XXX”加入" />
+
+        <TextView
+            android:id="@+id/tv_item_friend_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_friend_title"
+            android:textColor="@color/text_color_black_2"
+            android:textSize="@dimen/textSize_m_14"
+            tools:text="2018-04-03" />
+
+        <TextView
+            android:id="@+id/tv_item_friend_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/main"
+            android:textSize="@dimen/textSize_m_14"
+            tools:text="+4书券" />
+    </RelativeLayout>
+
+    <View style="@style/item_line" />
+
+</LinearLayout>

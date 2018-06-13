@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_zi"
+            android:elevation="1dp"
+            android:layout_marginLeft="6dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="会员福利大放送"
+                android:textColor="@color/orange_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="1.每周五领书卷，全年可选48元书卷"
+                android:textColor="@color/text_color_b9963a"
+                android:textSize="@dimen/textSize_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="2.包月专区小说免费读,精选500本任你看"
+                android:textColor="@color/text_color_b9963a"
+                android:textSize="@dimen/textSize_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="3.非包月专区小说，尊享8折优惠"
+                android:textColor="@color/text_color_b9963a"
+                android:textSize="@dimen/textSize_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="4.加v标识,独享尊贵身份,更多福利"
+                android:textColor="@color/text_color_b9963a"
+                android:textSize="@dimen/textSize_s" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/bg_fu"
+            android:gravity="bottom|center_horizontal"
+            android:text="D">
+
+            <TextView
+                android:id="@+id/btn_six_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="@drawable/icon_bg_h"
+                android:gravity="center"
+                android:textColor="@color/text_color_d35900"
+                android:text="开通六个月VIP（50元）" />
+
+            <TextView
+                android:id="@+id/btn_three_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_six_vip"
+                android:layout_below="@+id/btn_six_vip"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="@drawable/icon_bg_ho"
+                android:gravity="center"
+                android:textColor="@color/text_color_e96d6d"
+                android:text="开通三个月VIP（30元）" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_guanbi_fu" />
+</LinearLayout>

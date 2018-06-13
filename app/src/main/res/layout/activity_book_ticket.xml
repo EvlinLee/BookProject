@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhangwan.app.ui.mine.BookTicketActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_ticket_code"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/margin_10"
+                android:background="@drawable/textview_read_btn_gray_stroke_bg"
+                android:gravity="center"
+                android:hint="输入兑换码"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/commit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/button_green_selector"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="立即兑换"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:text="使用说明" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:drawableLeft="@drawable/green_doc"
+                android:drawablePadding="@dimen/margin_tiny"
+                android:text="兑换码是什么?"
+                android:textColor="@color/main"
+                android:textSize="@dimen/textSize_m" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:text="追阅小说为了回馈用户准备的书券兑换产品"
+                android:textColor="@color/text_color_666"
+                android:textSize="@dimen/textSize_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:drawableLeft="@drawable/green_doc"
+                android:drawablePadding="@dimen/margin_tiny"
+                android:text="如何兑换"
+                android:textColor="@color/main"
+                android:textSize="@dimen/textSize_m" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:text="获得兑换码后，你可以在【我的】-【书券兑换】内进行兑换"
+                android:textColor="@color/text_color_666"
+                android:textSize="@dimen/textSize_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:drawableLeft="@drawable/green_doc"
+                android:drawablePadding="@dimen/margin_tiny"
+                android:text="兑换码使用规则"
+                android:textColor="@color/main"
+                android:textSize="@dimen/textSize_m" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:text="1.一个兑换码只能兑换一次"
+                android:textColor="@color/text_color_666"
+                android:textSize="@dimen/textSize_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:text="2.一个账号每天只能兑换一次"
+                android:textColor="@color/text_color_666"
+                android:textSize="@dimen/textSize_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:text="3.兑换成功后会在书券记录里显示"
+                android:textColor="@color/text_color_666"
+                android:textSize="@dimen/textSize_s" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

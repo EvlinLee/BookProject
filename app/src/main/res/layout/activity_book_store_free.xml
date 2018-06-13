@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhangwan.app.ui.bookstore.free.BookStoreFreeActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/ns_bookstore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/main" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tiny"
+                    android:layout_toRightOf="@+id/line"
+                    android:text="限时免费" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_free_limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <View style="@style/item_line_mode"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/line1"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/main" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tiny"
+                    android:layout_toRightOf="@+id/line1"
+                    android:text="男生免费" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_tiny"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:drawablePadding="@dimen/margin_tiny"
+                    android:drawableRight="@drawable/more"
+                    android:text="更多" />
+
+            </RelativeLayout>
+
+            <View style="@style/item_line"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_boy_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/white" />
+
+            <View style="@style/item_line_mode"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/line3"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/main" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_tiny"
+                    android:layout_toRightOf="@+id/line3"
+                    android:text="女生免费" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_tiny"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:drawablePadding="@dimen/margin_tiny"
+                    android:drawableRight="@drawable/more"
+                    android:text="更多" />
+
+            </RelativeLayout>
+
+            <View style="@style/item_line"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_girl_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/white" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

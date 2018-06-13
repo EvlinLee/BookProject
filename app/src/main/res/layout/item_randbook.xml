@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_randbook_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="65dp"
+        android:layout_height="90dp">
+
+        <ImageView
+            android:id="@+id/iv_randbook_pic"
+            android:layout_width="65dp"
+            android:layout_height="90dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_randbook_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="2dp"
+            android:src="@drawable/bookshelf_cancel"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/iv_randbook_name"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/text_color_666"
+        android:textSize="@dimen/textSize_m" />
+
+</LinearLayout>

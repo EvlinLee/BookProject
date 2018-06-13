@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <TextView
+        android:id="@+id/tv_chatper_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/margin_tiny_4"
+        android:layout_marginLeft="@dimen/margin_small_8"
+        android:layout_marginRight="@dimen/margin_small_8"
+        android:layout_marginTop="@dimen/margin_tiny_4"
+        android:background="@drawable/shape_read_chatper_menu"
+        android:gravity="center"
+        android:paddingBottom="@dimen/margin_tiny_4"
+        android:paddingLeft="@dimen/margin_tiny_4"
+        android:paddingRight="@dimen/margin_tiny_4"
+        android:paddingTop="@dimen/margin_tiny_4"
+        android:textColor="@color/read_chatper_textcolor_2"
+        android:textSize="@dimen/textSize_s_12"
+        tools:text="1~100章" />
+</RelativeLayout>

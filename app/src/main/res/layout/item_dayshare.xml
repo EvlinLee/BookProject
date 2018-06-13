@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle_12"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_item_dayshare"
+            android:layout_width="30dp"
+            android:layout_height="45dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_item_dayshare_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small_8"
+            android:layout_marginRight="@dimen/margin_small_8"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/text_color_black_1"
+            tools:text="我们终将独自长大" />
+
+        <TextView
+            android:paddingRight="@dimen/margin_small_8"
+            android:paddingLeft="@dimen/margin_small_8"
+            android:paddingTop="@dimen/margin_tiny_4"
+            android:paddingBottom="@dimen/margin_tiny_4"
+            android:background="@drawable/button_green_without_solid_selector"
+            android:id="@+id/tv_item_dayshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="去分享"
+            android:textColor="@color/main"
+            android:textSize="@dimen/textSize_m_14" />
+    </LinearLayout>
+
+    <View style="@style/item_line" />
+
+</LinearLayout>

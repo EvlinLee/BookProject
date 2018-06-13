@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sf_mine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mine_top_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_mine_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/margin_middle_12"
+                        android:src="@drawable/no_message" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.zhangwan.app.widget.CircleImageView
+                        android:id="@+id/iv_mine_pic"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="@dimen/margin_middle_12"
+                        android:src="@drawable/default_author"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="2dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_middle_12"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_m_14"
+                            tools:text="Sayonara" />
+
+                        <TextView
+                            android:id="@+id/tv_mine_userid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_tiny_4"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_m_14"
+                            tools:text="ID:54400196" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_mine_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_medium_16"
+                        android:background="@drawable/mine_sign_bg"
+                        android:gravity="center"
+                        android:text="签到"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_m_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_mine_coin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_coin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="bottom"
+                            android:text="0.0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_l_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_tiny_4"
+                            android:text="书币金额"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_s_12" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/margin_small_8"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/view" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_mine_welfare"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_mine_welfare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="@dimen/margin_small_8"
+                            android:drawableRight="@drawable/fuli"
+                            android:gravity="bottom"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_l_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_tiny_4"
+                            android:text="福利中心"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textSize_s_12" />
+                    </LinearLayout>
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/view" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_mine_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_mine_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="bottom"
+                            android:text="0.0"
+                            android:textColor="@color/main"
+                            android:textSize="@dimen/textSize_l_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_middle_12"
+                            android:text="书券余额"
+                            android:textColor="@color/text_color_black_2"
+                            android:textSize="@dimen/textSize_s_12" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/item_line_mode"
+
+                android:layout_marginTop="@dimen/margin_middle_12" />
+
+            <include layout="@layout/fragment_main_mine_top" />
+
+            <include layout="@layout/fragment_main_mine_center" />
+
+            <View style="@style/item_line_mode" />
+
+            <include layout="@layout/fragment_main_mine_bottom" />
+
+            <View style="@style/item_line_mode" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
